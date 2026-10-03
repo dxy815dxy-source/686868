@@ -85,7 +85,7 @@ const DownloadButtonGroup = () => {
             toast.success('Copied direct link to clipboard.')
           }}
           btnColor="pink"
-          btnText={'复制直连'}
+          btnText={'复制连接'}
           btnIcon="copy"
           btnTitle={'Copy the permalink to the file to the clipboard'}
         />
