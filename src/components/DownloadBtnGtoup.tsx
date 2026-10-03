@@ -85,14 +85,14 @@ const DownloadButtonGroup = () => {
             toast.success('Copied direct link to clipboard.')
           }}
           btnColor="pink"
-          btnText={'Copy direct link'}
+          btnText={'复制直链'}
           btnIcon="copy"
           btnTitle={'Copy the permalink to the file to the clipboard'}
         />
         <DownloadButton
           onClickCallback={() => setMenuOpen(true)}
           btnColor="teal"
-          btnText={'Customise link'}
+          btnText={'自定义链'}
           btnIcon="pen"
         />
       </div>
