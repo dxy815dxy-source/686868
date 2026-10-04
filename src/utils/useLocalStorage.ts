@@ -12,7 +12,7 @@ function useLocalStorage<T>(key: string, initialValue: T): [T, SetValue<T>] {
     }
 
     try {
-      const item = window.localStorage.getItem(key)
+      const item = window.sessionStorage.getItem(key)
       return item ? (JSON.parse(item) as T) : initialValue
     } catch (error) {
       console.warn(`Error reading localStorage key “${key}”:`, error)
@@ -37,7 +37,7 @@ function useLocalStorage<T>(key: string, initialValue: T): [T, SetValue<T>] {
       const newValue = value instanceof Function ? value(storedValue) : value
 
       // Save to local storage
-      window.localStorage.setItem(key, JSON.stringify(newValue))
+      window.sessionStorage.setItem(key, JSON.stringify(newValue))
 
       // Save state
       setStoredValue(newValue)
