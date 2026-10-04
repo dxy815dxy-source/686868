@@ -9,7 +9,7 @@ function encryptToken(token: string): string {
 // Fetch stored token from localStorage and encrypt with SHA256
 export function getStoredToken(path: string): string | null {
   const storedToken =
-    typeof window !== 'undefined' ? JSON.parse(localStorage.getItem(matchProtectedRoute(path)) as string) : ''
+    typeof window !== 'undefined' ? JSON.parse(sessionStorage.getItem(matchProtectedRoute(path)) as string) : ''
   return storedToken ? encryptToken(storedToken) : null
 }
 
